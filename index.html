@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+</head>
+<body>
+    <div>
+        <h2>Product Page</h2>
+        <!-- Display products here -->
+        <div id="products">
+            <!-- Products list goes here -->
+        </div>
+
+        <!-- Cart section -->
+        <div id="cart" data-bind="visible: isLoggedIn">
+            <h3>Cart</h3>
+            <!-- Cart content goes here -->
+        </div>
+
+        <!-- Login section -->
+        <div id="login" data-bind="visible: !isLoggedIn()">
+            <h3>Login</h3>
+            <button data-bind="click: login">Login</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
